@@ -1,0 +1,142 @@
+* {
+	padding: 0;
+	margin: 0;
+	}
+html { 
+	overflow:scroll;
+	}
+body{
+	margin:0;
+    padding:0;
+    font-family:helvetica, sans-serif;
+	background-image:url(background1.jpg);
+	background-repeat: no-repeat;
+	background-size:cover;
+
+}
+form{padding:0px 15px 15px 0px;}  
+ 
+form fieldset{border:0;align:center;}  
+form label{display:inline-block;width:70px;text-align:left}
+input[type=submit] {
+    font-weight:bold;
+    background:#00abff;
+    color:#fff;
+    padding:10px 20px;
+    font-size:14px;
+	position:relative;
+	left:8%;
+}
+label { 
+    /*float:left;
+    clear:both;*/
+    color:#333;
+    margin-bottom:2px; 
+	position:relative;
+	top:30px;
+}
+input, textarea { 
+    /*clear:both;
+    float:left;*/
+	position:relative;
+	top:30px;
+    margin:10px auto 10px;
+    background:#ededed;
+    border:0;
+    padding:6px 10px;
+    font-size:16px;
+}
+select { 
+    /*clear:both;
+    float:left;*/
+	position:relative;
+	top:30px;
+    margin:10px auto 10px;
+    background:#ededed;
+    border:0;
+    font-size:16px;
+}
+h1 { 
+    font-weight:normal;
+    border-bottom:1px solid #bbb;
+    padding:0 40%;
+	padding-bottom:1%;
+}
+
+h2 {
+    font-weight:normal;
+    margin:5% 0 0 15%;
+}
+p.date { 
+	padding-top:5%;
+	padding-left:55%;
+    color:#ccc;
+    font-family: georgia, serif;
+    font-size: 20px;
+    font-style: italic; 
+
+	
+}
+p{
+	padding-left:5%;
+	line-height: 1.8;
+	font-size: 20px;
+
+}
+a { 
+    color:#00abff;
+    text-decoration:none;    
+}
+#content { 
+	position:absolute;
+	/*float:left;*/
+	left:25%;
+	right:25%;
+	top:5%;
+	margin:3% auto;
+}
+
+#header {
+    padding:1% 10%;
+    font-size:14px;
+    background:black;
+    color:#fff;
+    overflow:auto;
+}
+
+#header .logo {
+    font-family: 'Muli', sans-serif;
+	position:absolute;
+	left:10%;
+    color:#f3f7cc;
+    font-size:20px;
+    margin-right:25%;
+}
+
+#header ul.menu {
+    list-style:none;
+    display:table;
+	margin:0 auto;
+}
+#header ul.menu li {
+    float:left;
+    padding:4px 20px;
+}
+
+#header ul.menu li.selected a, #header ul.menu li.selected a:hover {
+    color:white;
+    font-weight:bold;
+}
+
+#header a {
+    color:#f3f7cc;
+}
+#header a:hover {
+    color:white;
+}
+
+#header .user {
+    position:absolute;
+	right:10%;
+    top:2%;
+}

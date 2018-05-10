@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link href="{% static "css/blog_base.css" %}" rel="stylesheet">
+  <script type="text/javascript">
+  function del(){
+  if(confirm("确定删除该帖子么?删除后无法恢复哦")){
+  return true;
+  }else{
+  return false;
+  }
+  }
+  </script>
+</head>
+<body>
+  <div id="header">        
+	<span class="logo">Blog Garden</span>
+	<ul class="menu">
+		<li {% if section == "myblog" %}class="selected"{% endif %}>
+			<a href="{% url "myblog" %}">My Blog</a>
+		</li>
+		<li {% if section == "images" %}class="selected"{% endif %}>
+			<a href="{% url "add_post" %}">Images</a>
+		</li>
+		<li {% if section == "people" %}class="selected"{% endif %}>
+			<a href="{% url "blog" %}">People</a>
+		</li>
+	</ul>
+	<span class="user">
+	{% if request.user.is_authenticated %}
+		Hello {{ request.user.first_name }},
+	<a href="{% url "logout" %}">Logout</a>
+	{% else %}
+		<a href="{% url "login" %}">Log-in</a>
+	{% endif %}
+	</span>
+  </div>   
+  
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+</body>
+</html>

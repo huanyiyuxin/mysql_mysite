@@ -1,0 +1,11 @@
+{% extends "base_index.html" %}
+{% block title %}发布帖子{% endblock %}
+{% block content %}
+    <h1>编辑新帖子</h1>
+    <p>请按照下列各式编写新帖子:</p>
+    <form action="" method="post" enctype="multipart/form-data">
+        {{ post_form.as_p }}
+        {% csrf_token %}
+    <p><input type="submit" value="提交"></p>
+    </form>
+{% endblock %}
